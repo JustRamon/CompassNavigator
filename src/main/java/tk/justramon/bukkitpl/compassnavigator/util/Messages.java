@@ -38,6 +38,7 @@ public class Messages
 	public static void wrongArgs(Player p)
 	{
 		p.sendMessage(ChatColor.RED + "Sorry, but the argruments are wrong. Use Navigator like this:");
+		p.sendMessage(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "/nav" + ChatColor.GREEN + " - Set your compass' pointer to your current location.");
 		p.sendMessage(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "/nav x z" + ChatColor.GREEN + " - Set your compass' pointer to specified location.");
 		p.sendMessage(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "/nav reset" + ChatColor.GREEN + " - Reset your compass' pointer.");
 	}

@@ -1,0 +1,6 @@
+target/classes/plugin.yml
+*.class
+.settings/org.eclipse.jdt.core.prefs
+*.prefs
+*.classpath
+.project

@@ -44,6 +44,9 @@ public class NavigatorCommand
 		}
 		// Cmd without args will open the help menu.
 		else
-			Messages.wrongArgs(p);
+		{
+			p.setCompassTarget(p.getLocation());
+			Messages.sendPlayerMessage(p, ChatColor.GREEN + "Your compass direction has been succesfully set to your location.");
+		}
 	}
 }

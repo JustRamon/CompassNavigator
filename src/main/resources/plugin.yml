@@ -1,17 +1,21 @@
 name: CompassNavigator
-version: 1.0.1
+version: 1.0.6
 description: Let's you set your compass direction to coordinates!
-author: [JustRamon]
+author: [Raqbit]
 
-main: tk.justramon.bukkitpl.compassnavigator.core.CompassNavigator
+main: it.raqb.bukkitpl.compassnavigator.core.CompassNavigator
 
 commands:
     compassnavigator:
         description: Main CompassNavigator command
-        usage: /<command> <reset,x> <z>
+        usage: /<command> <reset,save,load,list,x> <z>
         aliases: [cn, nav, tomtom]
 
 permissions:
     compassnavigator.use:
         description: Gives access to this plugin.
+        default: op
+
+    compassnavigator.save:
+        description: Gives access to save, load & list
         default: op

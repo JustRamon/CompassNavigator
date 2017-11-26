@@ -4,3 +4,7 @@ target/classes/plugin.yml
 *.prefs
 *.classpath
 .project
+.gradle/
+CompassNavigator.iml
+build/
+run/

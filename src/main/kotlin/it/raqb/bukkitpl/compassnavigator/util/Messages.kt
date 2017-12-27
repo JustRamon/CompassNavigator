@@ -44,10 +44,15 @@ object Messages {
      * @param p The Player to send the message to
      */
     fun wrongArgs(p: Player) {
-        p.sendMessage(ChatColor.RED.toString() + "Invalid subcommand. Use Navigator like this:")
-        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav" + ChatColor.GREEN + " - Set your compass' pointer to your current location.")
-        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav x z" + ChatColor.GREEN + " - Set your compass' pointer to specified location.")
-        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav reset" + ChatColor.GREEN + " - Reset your compass' pointer.")
+        //TODO: Refactor this as help menu
+        p.sendMessage(ChatColor.RED.toString() + "Invalid usage. Use Navigator like this:")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav" + ChatColor.GREEN + " - Set your compass's pointer to your current location.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav x z" + ChatColor.GREEN + " - Set your compass's pointer to specified location.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav save <name>" + ChatColor.GREEN + " - Saves your compass's pointer location with the specified name.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav list" + ChatColor.GREEN + " - Lists all your saved locations.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav load <name>" + ChatColor.GREEN + " - Loads the specified location into your compass.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav <player>" + ChatColor.GREEN + " - Set your compass's pointer to the location of a player.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav reset" + ChatColor.GREEN + " - Reset your compass's pointer.")
     }
 
     /**

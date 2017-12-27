@@ -10,7 +10,7 @@ import java.io.File
 
 object SaveCommand : CommandExecutable {
     override fun exe(p: Player, args: Array<String>, pl: Plugin) {
-        val currentLocation = p.compassTarget;
+        val currentLocation = p.compassTarget
 
         if (args.size != 2) {
             Messages.wrongArgs(p)
@@ -19,7 +19,7 @@ object SaveCommand : CommandExecutable {
 
         val newName = args[1]
 
-        val playerFile = File(pl.dataFolder, "savedLocations/" + p.uniqueId + ".yml")
+        val playerFile = File(pl.dataFolder, "savedLocations/" + p.uniqueId.toString() + ".yml")
 
         if (!playerFile.exists())
             playerFile.createNewFile()

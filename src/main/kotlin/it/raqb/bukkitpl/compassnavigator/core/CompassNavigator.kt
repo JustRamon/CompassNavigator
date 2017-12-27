@@ -10,6 +10,9 @@ import java.io.File
 
 class CompassNavigator : JavaPlugin() {
 
+    /**
+     * Sets up the savedLocations folder
+     */
     override fun reloadConfig() {
         super.reloadConfig()
 

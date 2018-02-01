@@ -33,20 +33,23 @@ object NavigatorCommand : CommandExecutable {
             }
             "save" -> {
                 // Save subcommand
-                if (hasPermission(p,"compassnavigator.save"))
+                if (hasPermission(p, "compassnavigator.save"))
                     SaveCommand.exe(p, args, pl)
 
             }
             "load" -> {
                 // Load subcommand
-                if (hasPermission(p,"compassnavigator.save"))
+                if (hasPermission(p, "compassnavigator.save"))
                     LoadCommand.exe(p, args, pl)
 
             }
             "list" -> {
                 // List subcommand
-                if (hasPermission(p,"compassnavigator.save"))
+                if (hasPermission(p, "compassnavigator.save"))
                     ListCommand.exe(p, args, pl)
+            }
+            "help" -> {
+                Messages.sendHelpMessage(p)
             }
             else -> {
                 // Player location

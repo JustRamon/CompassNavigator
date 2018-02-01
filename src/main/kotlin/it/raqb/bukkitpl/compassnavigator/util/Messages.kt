@@ -57,6 +57,7 @@ object Messages {
         p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav" + ChatColor.GREEN + " - Set your compass's pointer to your current location.")
         p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav x z" + ChatColor.GREEN + " - Set your compass's pointer to specified location.")
         p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav save <name>" + ChatColor.GREEN + " - Saves your compass's pointer location with the specified name.")
+        p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav delete <name>" + ChatColor.GREEN + " - Deletes the saved location with the specified name.")
         p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav list" + ChatColor.GREEN + " - Lists all your saved locations.")
         p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav load <name>" + ChatColor.GREEN + " - Loads the specified location into your compass.")
         p.sendMessage(ChatColor.DARK_GREEN.toString() + "" + ChatColor.BOLD + "/nav <player>" + ChatColor.GREEN + " - Set your compass's pointer to the location of a player.")

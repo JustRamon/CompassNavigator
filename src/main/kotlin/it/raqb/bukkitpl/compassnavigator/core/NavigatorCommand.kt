@@ -1,5 +1,6 @@
 package it.raqb.bukkitpl.compassnavigator.core
 
+import it.raqb.bukkitpl.compassnavigator.cmd.DeleteCommand
 import it.raqb.bukkitpl.compassnavigator.cmd.ListCommand
 import it.raqb.bukkitpl.compassnavigator.cmd.LoadCommand
 import it.raqb.bukkitpl.compassnavigator.cmd.SaveCommand
@@ -36,6 +37,10 @@ object NavigatorCommand : CommandExecutable {
                 if (hasPermission(p, "compassnavigator.save"))
                     SaveCommand.exe(p, args, pl)
 
+            }
+            "delete" -> {
+                if (hasPermission(p, "compassnavigator.save"))
+                    DeleteCommand.exe(p, args, pl)
             }
             "load" -> {
                 // Load subcommand

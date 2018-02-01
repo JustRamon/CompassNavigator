@@ -19,7 +19,13 @@ object SaveCommand : CommandExecutable {
 
         val newName = args[1]
 
-        val playerFile = File(pl.dataFolder, "savedLocations/" + p.uniqueId.toString() + ".yml")
+        val savedLocationsFolder = File(pl.dataFolder, "savedLocations/")
+
+        if (!savedLocationsFolder.exists()) {
+            savedLocationsFolder.mkdirs()
+        }
+
+        val playerFile = File(savedLocationsFolder, p.uniqueId.toString() + ".yml")
 
         if (!playerFile.exists())
             playerFile.createNewFile()

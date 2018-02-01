@@ -40,6 +40,6 @@ class CompassNavigator : JavaPlugin() {
             } else
                 Messages.noPermission(sender)
         }
-        return false
+        return true
     }
 }

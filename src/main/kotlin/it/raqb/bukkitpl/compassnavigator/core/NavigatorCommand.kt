@@ -5,6 +5,7 @@ import it.raqb.bukkitpl.compassnavigator.cmd.LoadCommand
 import it.raqb.bukkitpl.compassnavigator.cmd.SaveCommand
 import it.raqb.bukkitpl.compassnavigator.util.CommandExecutable
 import it.raqb.bukkitpl.compassnavigator.util.Messages
+import it.raqb.bukkitpl.compassnavigator.util.Util.hasPermission
 import net.md_5.bungee.api.ChatColor
 import org.bukkit.Bukkit
 import org.bukkit.Location
@@ -32,19 +33,19 @@ object NavigatorCommand : CommandExecutable {
             }
             "save" -> {
                 // Save subcommand
-                if (p.hasPermission("compassnavigator.save"))
+                if (hasPermission(p,"compassnavigator.save"))
                     SaveCommand.exe(p, args, pl)
 
             }
             "load" -> {
                 // Load subcommand
-                if (p.hasPermission("compassnavigator.save"))
+                if (hasPermission(p,"compassnavigator.save"))
                     LoadCommand.exe(p, args, pl)
 
             }
             "list" -> {
                 // List subcommand
-                if (p.hasPermission("compassnavigator.save"))
+                if (hasPermission(p,"compassnavigator.save"))
                     ListCommand.exe(p, args, pl)
             }
             else -> {
@@ -52,8 +53,7 @@ object NavigatorCommand : CommandExecutable {
                 if (args.size == 1 && args[0].toDoubleOrNull() == null) {
                     val targetPlayer: Player? = Bukkit.getPlayer(args[0])
 
-                    if (!p.hasPermission("compassnavigator.player")) {
-                        Messages.noPermission(p)
+                    if (!hasPermission(p, "compassnavigator.player")) {
                         return
                     }
 
